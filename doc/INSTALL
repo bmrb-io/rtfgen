@@ -1,0 +1,12 @@
+
+Installing script files on BMRB webserver is simple:
+
+ * Copy all files except globals.txt from project's src directory to
+   $DocumentRoot/software/rtfgen on master website. Don't copy tmp/ subdir,
+   create it in $DocumentRoot/software/rtfgen instead.
+ * Make sure php_includes/Globals.inc file in $DocumentRoot has the settings
+   in globals.txt.
+ * Make sure there's sans.php (from sans project) in $SWLIBDIR.
+ * Add all new files and directories to CVS.
+
+Everything should be mirrored to public webservers automatically.

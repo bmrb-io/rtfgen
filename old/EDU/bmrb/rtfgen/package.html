@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1 Fri May 31 18:05:49 CDT 2002
+
+  Copyright 2002 Board of Regents, University of Wisconsin,
+  Madison, Wisconsin, U.S.A. All Rights Reserved.
+
+-->
+</head>
+<body bgcolor="white">
+
+<P>
+  RTF generator.
+
+<h2>Package Details</h2>
+<P>
+  Converts chemical shift table from NMR-STAR loop to RTF table.
+
+<H2>Classes</H2>
+<P>
+  {@link EDU.bmrb.rtfgen.rtf rtf} contains constants: RTF codes, amino acid
+  labels, etc.
+<P>
+  {@link EDU.bmrb.rtfgen rtfgen} is the executable class that handles the conversion.
+<P>
+  {@link EDU.bmrb.rtfgen.shiftdata shiftdata}: data structure that holds chemical
+  shifts table.
+<P>
+  {@link EDU.bmrb.rtfgen.pair pair}, {@link EDU.bmrb.rtfgen.triple triple}, and
+  {@link EDU.bmrb.rtfgen.VectorSorter VectorSoter}: utility classes for sorting
+  the table etc.
+
+<h2>Usage</h2>
+<P>
+  <CODE>java EDU.bmrb.rtfgen.rtfgen&nbsp;<EM>input&nbsp;file</EM>&nbsp;<EM>sort&nbsp;order</EM>&nbsp;<E>output&nbsp;file</EM></CODE>
+  <UL>
+  <LI>input file: NMR-STAR file with chemical shifts. It can be just the
+      chemical shifts loop: the program will attempt to add data block and
+      saveframe names required by STARlib.</LI>
+  <LI>sort order: 1 -- by chemical shift number, 2 -- by amino acid.</LI>
+  <LI>output file: use dash '-' to print to stdout.</LI>
+  </UL>
+</body>
+</html>

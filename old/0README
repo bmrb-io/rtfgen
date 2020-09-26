@@ -1,0 +1,29 @@
+Misc. notes in no particular order
+----------------------------------
+
+Rtfgen.java is a drop-in replacement for an older C++ program. 
+That's why it comes with a CGI script instead of an applet page. 
+
+During make, javac will complain about deprecated API. This is because 
+System.setOut() (used to redirect standard output to a file) expects a 
+deprecated class as parameter (IOW it's Sun's fault). 
+Ignore the warning.
+
+You'll need to install starlibj to run rtfgen.
+
+Make sure GLOBALCLASSES directory (see Makefile) is in your CLASSPATH.
+
+To run rtfgen.java interactively, type
+    java EDU.bmrb.rtfgen.rtfgen input_file sort_option output_file
+at command prompt.
+
+ input_file   file that contains  chemical shifts. It must contain
+              data loop of assigned chemical shifts in NMR-STAR 
+	      format (it doesn't have to be a complete NMR-STAR
+	      file).
+ sort_option  1 -- "sort by amino-acid" actually prints sequences
+                   in order they're listed in input file 
+              2 -- sort by residue sequence code
+ output_file  "-" (single dash without quotes) will output RTF to 
+              the screen.
+

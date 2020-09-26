@@ -1,0 +1,69 @@
+loop_
+      _Atom_chem_shift.ID
+      _Atom_chem_shift.Entity_assembly_ID
+      _Atom_chem_shift.Entity_ID
+      _Atom_chem_shift.Comp_index_ID
+      _Atom_chem_shift.Seq_ID
+      _Atom_chem_shift.Comp_ID
+      _Atom_chem_shift.Atom_ID
+      _Atom_chem_shift.Atom_type
+      _Atom_chem_shift.Val
+      _Atom_chem_shift.Val_err
+      _Atom_chem_shift.Ambiguity_code
+      _Atom_chem_shift.Auth_seq_ID
+      _Atom_chem_shift.Assigned_chem_shift_list_ID
+      
+       1 1 1  1  1 GLY QA   H  8.737 0.000 . ?  1 
+       2 1 1  2  2 ALA MB   H  4.738 0.000 . ?  1 
+       3 1 1  3  3 VAL MG1  H  3.079 0.003 . ?  1 
+       4 1 1  3  3 VAL MG2  H  2.882 0.001 . ?  1 
+       5 1 1  4  4 VAL QG   H  8.382 0.002 . ?  1 
+       5 1 1  4  4 VAL HG11 H  8.382 0.002 . ?  1 
+       5 1 1  4  4 VAL HG12 H  8.382 0.002 . ?  1 
+       5 1 1  4  4 VAL HG13 H  8.382 0.002 . ?  1 
+       6 1 1  5  5 ILE MG   H  4.365 0.001 . ?  1 
+       7 1 1  5  5 ILE MD   H  1.568 0.008 . ?  1 
+       8 1 1  6  6 ILE QG   H  1.568 0.008 . ?  1 
+      10 1 1  7  7 LEU MD1  H  1.500 0.008 . ?  1 
+      11 1 1  7  7 LEU MD2  H  2.737 0.000 . ?  1 
+      12 1 1  7  7 LEU QB   H  8.302 0.001 . ?  1 
+      13 1 1  7  7 LEU QD   H  4.712 0.000 . ?  1 
+      14 1 1  8  8 PRO QB   H  2.891 0.001 . ?  1 
+      15 1 1  8  8 PRO QG   H  2.722 0.003 . ?  1 
+      16 1 1  8  8 PRO QD   H  7.063 0.002 . ?  1 
+      17 1 1  9  9 SER QB   H  7.063 0.002 . ?  1 
+      18 1 1 10 10 ASP QB   H  7.136 0.002 . ?  1 
+      19 1 1 11 11 CYS QB   H  8.302 0.001 . ?  1 
+      20 1 1 12 12 HIS QB   H  4.712 0.000 . ?  1 
+      21 1 1 13 13 TRP QB   H  2.891 0.001 . ?  1 
+      22 1 1 14 14 THR MG   H  2.722 0.003 . ?  1 
+      23 1 1 15 15 ASN QB   H  7.036 0.002 . ?  1 
+      24 1 1 15 15 ASN QD   H  7.037 0.002 . ?  1 
+      25 1 1 16 16 GLU QB   H  7.247 0.002 . ?  1 
+      26 1 1 16 16 GLU QG   H  9.999 0.004 . ?  1 
+      27 1 1 17 17 GLN QB   H  7.247 0.002 . ?  1 
+      28 1 1 17 17 GLN QG   H  9.999 0.004 . ?  1 
+      29 1 1 17 17 GLN QE   H  7.247 0.002 . ?  1 
+      30 1 1 18 18 LYS QB   H  1.500 0.008 . ?  1 
+      31 1 1 18 18 LYS QG   H  2.737 0.000 . ?  1 
+      32 1 1 18 18 LYS QD   H  8.302 0.001 . ?  1 
+      33 1 1 18 18 LYS QE   H  4.712 0.000 . ?  1 
+      34 1 1 18 18 LYS QZ   H  4.712 0.000 . ?  1 
+      35 1 1 19 19 ARG QB   H  1.500 0.008 . ?  1 
+      36 1 1 19 19 ARG QG   H  2.737 0.000 . ?  1 
+      37 1 1 19 19 ARG QD   H  8.302 0.001 . ?  1 
+      38 1 1 19 19 ARG QH1  H  4.712 0.000 . ?  1 
+      39 1 1 19 19 ARG QH2  H  4.712 0.000 . ?  1 
+      40 1 1 20 20 ARG QH   H  4.712 0.000 . ?  1 
+      41 1 1 21 21 MET QB   H  2.737 0.000 . ?  1 
+      42 1 1 21 21 MET QG   H  8.302 0.001 . ?  1 
+      43 1 1 21 21 MET ME   H  4.712 0.000 . ?  1 
+      44 1 1 22 22 PHE QB   H  2.737 0.000 . ?  1 
+      45 1 1 22 22 PHE QD   H  8.302 0.001 . ?  1 
+      46 1 1 22 22 PHE QE   H  4.712 0.000 . ?  1 
+      47 1 1 23 23 PHE QR   H  8.302 0.001 . ?  1 
+      48 1 1 24 24 TYR QB   H  2.737 0.000 . ?  1 
+      49 1 1 24 24 TYR QD   H  8.302 0.001 . ?  1 
+      50 1 1 24 24 TYR QE   H  4.712 0.000 . ?  1 
+      51 1 1 25 25 TYR QR   H  8.302 0.001 . ?  1 
+stop_

@@ -1,0 +1,5 @@
+<?php
+
+$RTFDSN = 'mysql://web:bmrbweb@localhost/BMRB_dict';
+$TMPDIR = './tmp';
+?>

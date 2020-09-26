@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+    <HEAD>
+        <TITLE>Data converter</TITLE>
+        <link REL="stylesheet" TYPE="text/css" HREF="/stylesheets/main.css" TITLE="main stylesheet">
+    </HEAD>
+	
+    <BODY>
+        <CENTER>
+            <!--#include virtual="/includes/xmenu.html" -->
+	
+	    <TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT">  <!-- layout table -->
+	    <!-- This is a two column table. It displays a side column menu and the main page -->
+	        <TR><TD class="sidemenuCol">
+		    <!--#include virtual="/includes/tools_menu.html" -->
+		</TD>
+								      
+		<TD VALIGN="TOP">
+		    <TABLE class="content"  BORDER="0" CELLPADDING="4" CELLSPACING="0" ALIGN="LEFT">  <!-- content table -->
+		        <TR class="titleAndIcon"><TD class="topContentTitle">
+                            <H1>RTFGen: NMR-STAR 3.1 to RTF table converter</H1>
+                        </TD></TR>
+			<TR><TD>
+			    <FORM method="post" action="form.php" enctype="multipart/form-data" name="rtfgen">
+				<INPUT type="hidden" name="MAX_FILE_SIZE" value="1048576"/>
+				<LABEL for="filebox">Upload NMR-STAR 3.1 file: </LABEL>
+				<INPUT type="file" name="uplfile" id="filebox" size="32"/><P>
+				Input file type:<BR>
+				<INPUT type="radio" name="type" value="1" /><STRONG>Complete BMRB entry</STRONG><BR>
+				<INPUT type="radio" name="type" value="2"/><STRONG>Chemical shifts loop only</STRONG><P>
+				Output options:<BR>
+				<INPUT type="radio" name="sort" value="1" checked/>Sort table by residue sequence number<BR>
+				<INPUT type="radio" name="sort" value="2"/>Sort table by residue code<P>
+				<INPUT type="submit" value="Generate RTF"/>
+                    	    </FORM>
+			</TR></TD>
+			<TR><TD><HR></TR></TD>
+			<TR><TD>
+			  <STRONG>Input file types</STRONG>
+			  <P>
+			  <STRONG>1.</STRONG> Complete BMRB entry can contain multiple assigned chemical shifts saveframes and
+			  multiple entities (polymers) in the assembly (molecular system). RTFGen will create separate tables
+			  for each saveframe and/or entity assembly ID, using assembly name, entity assembly name, and sample
+			  conditions for the titles.
+			  <P>
+			  <STRONG>2.</STRONG> When uploading chemical shifts loop only, RTFGen will generate a single table "Table 1".
+			  Input file must contain data for single entity only and must have at least the following columns and values:
+			  <PRE>
+    loop_
+        _Atom_chem_shift.Comp_index_ID 
+        _Atom_chem_shift.Comp_ID 
+        _Atom_chem_shift.Atom_ID 
+        _Atom_chem_shift.Val 
+        
+          ... ... ... ... 
+          ...
+          
+    stop_
+			  </PRE>
+			</TR></TD>
+                    </TABLE>   <!-- END  content table -->
+	        </TD></TR>
+		<!--#include virtual="/includes/footer.html" -->
+	    </TABLE>  <!-- END  layout table -->
+	</CENTER>
+    </BODY>
+</HTML>

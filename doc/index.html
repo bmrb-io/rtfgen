@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<!--
+ * Created on Dec 23, 2008
+ *
+ * To change the template for this generated file go to
+ * Window - Preferences - PHPeclipse - PHP - Code Templates
+-->
+ <head>
+  <title>RTF generator</title>
+  <style type="text/css">
+  	.line { font-size: 1px; border-bottom: thin solid; }
+  	.timestamp { font-family: arial, helvetica, sans-serif; font-size: 75%; }
+  	tt { font-family: arial, helvetica, sans-serif; font-size: 100%; font-variant: small-caps; }
+  </style>
+ </head>
+ <body>
+  <h1>RTF table generator</h1>
+  <p>
+    Converts NMR-STAR 3.1 chemical shift table to publication (rich text) format.
+  <p>
+  <em>Project location:</em> <strong>svn:///file/svn/websoft/rtfgen</strong>
+  <br>
+  <a href="INSTALL">website installation instructions</a>
+  <div class="line">&nbsp;</div>
+
+  <h2>RTFgen</h2>
+  <p>
+    This is a quick and dirty PHP rewrite of an old Java application. It uses hand-coded RTF
+    sequences and can only deal with 20 common amino-acids. The original was written when RTF
+    was the only way to create tables with superscript Greek letters that could be imported
+    into word processors. Nowadays more word processors can import HTML than RTF. 
+  <p>
+    This version can handle "bare" chemical shift tables (from <em>loop_</em> to <em>stop_</em>)
+    in addition to complete NMR-STAR 3.1. files, and can process tables with multiple entities
+    and multiple assigned chemical shift saveframes (<strong>note</strong> that this will only
+    work with complete entries: a bare loop with shifts for multiple entities will result in
+    one RTF table). 
+
+  <h3>Publication format</h3>
+  <p>
+    Table with following columns:
+    <ol>
+      <li>residue ID in <em>XN</em> format, e.g. <em>A1</em></li>
+      <li>C carbon chemical shift</li>
+      <li>C<sup>&alpha;</sup> carbon chemical shift</li>
+      <li>C<sup>&beta;</sup>carbon chemical shift</li>
+      <li>other chemical shifts</li> 
+    </ol>
+    For carbons, proton shifts are given in parentheses, with asterisk for missing value. "Other" column
+    contains atom records: backbone atom ID followed by comma, followed by shift value, followed by proton
+    shift in parentheses, as above. Multiple records are delimited with semicolons.
+  <p>
+    Hopefully journals are moving away from publishing chemical shifts in the articles and soon no one will
+    use this format for anything.
+  
+  <h3>Files</h3>
+  <p>
+    <tt>index.html</tt> and <tt>form.php</tt>: interface forms.
+  <p>
+    <tt>rtfgen.php</tt>: main program.
+  <p>
+    <tt>LoopParser.php</tt>: SANS parser for bare NMR-STAR loop.
+  <p>
+    <tt>StarParser.php</tt> and <tt>RTFGenParser.php</tt>: SANS parser for complete BMRB entry.
+    <strong>Note</strong> that the script can process either a complete error-free BMRB entry or
+    a bare loop. Entries with errors or files with multiple loops (but no saveframes etc.) will
+    cause it to fail.
+  <p>
+    <tt>SampleCond.php</tt> and <tt>ShiftRow.php</tt>: data structures for holding sample conditions
+    (used in table headers when converting complete entry) and chemical shift data.
+  <p>
+    <tt>rtf.php</tt>: RTF control sequences, string constants.
+    
+  <div class="line">&nbsp;</div>
+  
+  <p class="timestamp">
+    Last updated: 2008-12-17   
+ </body>
+</html>
